@@ -7,4 +7,4 @@ app.use(express.json())
 
 app.use("/vm", vmRouter)
 
-app.listen(3000, () => console.log("Terraform API listening on port 3000"))
+app.listen(4000, () => console.log("Terraform API listening on port 4000"))

@@ -3,15 +3,21 @@
 import z from "zod"
 
 import { env } from "@/env"
+import { normalizeResourceName } from "@/lib/utils"
 import type { CreateVMRequestSchema } from "@/validators"
 
 export async function createVM(values: z.infer<typeof CreateVMRequestSchema>) {
-  const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/vms/create`, {
+  const normalizedValues = {
+    ...values,
+    name: normalizeResourceName(values.name),
+  }
+
+  const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/vm/create`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(values),
+    body: JSON.stringify(normalizedValues),
   })
   const data = await res.json()
 

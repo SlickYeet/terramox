@@ -11,7 +11,7 @@
     "check": "turbo lint typecheck format:check && manypkg check",
     "typecheck": "turbo run typecheck",
     "clean": "turbo clean && rm -rf node_modules .turbo pnpm-lock.yaml",
-    "shadcn": "bunx --bun --filter=frontend shadcn"
+    "shadcn": "cd frontend && bunx --bun shadcn"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",

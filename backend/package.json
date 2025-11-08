@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch run server.ts",
-    "build": "bun run build server.ts --outfile dist/server.js",
+    "dev": "bun --watch run src/server.ts",
+    "build": "bun run build src/server.ts --outfile dist/server.js",
     "start": "bun run dist/server.js",
     "format": "prettier '**/*.{mjs,ts,tsx,md,json}' --ignore-path ../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --write",
     "format:check": "prettier '**/*.{mjs,ts,tsx,md,json}' --ignore-path ../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --check",

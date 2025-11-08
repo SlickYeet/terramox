@@ -2,11 +2,10 @@ import { exec } from "child_process"
 import fs from "fs/promises"
 import { Router } from "express"
 
+import { TERRAFORM_DIR } from "@/constants"
 import type { CreateResourceRequest } from "@/validators/requests"
 
 const router = Router()
-
-const TERRAFORM_DIR = "@terraform"
 
 router.post("/", async (req, res) => {
   const { name, cpu, memory } = req.body as CreateResourceRequest

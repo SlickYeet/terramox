@@ -1,10 +1,10 @@
 import express from "express"
 
-import createVMRouter from "@/routes/vm/create/route"
+import vmRouter from "@/routes/vm/index"
 
 const app = express()
 app.use(express.json())
 
-app.use("/vm/create", createVMRouter)
+app.use("/vm", vmRouter)
 
 app.listen(3000, () => console.log("Terraform API listening on port 3000"))

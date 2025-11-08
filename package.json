@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "terramox",
   "private": true,
   "scripts": {
     "build": "turbo run build",

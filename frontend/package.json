@@ -1,0 +1,53 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "auth:generate": "pnpm dlx @better-auth/cli@latest generate --config ./src/server/auth/index.ts --yes",
+    "lint": "eslint",
+    "lint:write": "eslint --fix",
+    "format": "prettier '**/*.{mjs,ts,tsx,md,mdx,json}' --ignore-path ../../.gitignore --ignore-unknown --write",
+    "format:check": "prettier '**/*.{mjs,ts,tsx,md,mdx,json}' --ignore-path ../../.gitignore --ignore-unknown --check",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf node_modules .turbo .next pnpm-lock.yaml",
+    "shadcn": "pnpm dlx shadcn@latest"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.12.0",
+    "better-auth": "^1.2.7",
+    "better-sqlite3": "^11.9.1",
+    "drizzle-orm": "^0.44.4",
+    "next": "16.0.1",
+    "postgres": "^3.4.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9",
+    "eslint-config-next": "^15.2.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.17",
+    "typescript": "^5.8.2"
+  },
+  "clx2aMetadata": {
+    "initVersion": "0.11.1-beta.9de2f24"
+  }
+}

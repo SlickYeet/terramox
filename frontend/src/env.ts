@@ -6,14 +6,14 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-    DATABASE_URL: z.string().url(),
+    DATABASE_URL: z.url(),
     BETTER_AUTH_SECRET: z.string(),
     GITHUB_CLIENT_ID: z.string(),
     GITHUB_CLIENT_SECRET: z.string(),
   },
 
   client: {
-    NEXT_PUBLIC_URL: z.string().url(),
+    NEXT_PUBLIC_URL: z.url(),
   },
 
   runtimeEnv: {

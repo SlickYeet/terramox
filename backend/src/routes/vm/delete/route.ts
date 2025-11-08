@@ -11,10 +11,16 @@ router.post("/", async (req, res) => {
   exec(
     `cd ${TERRAFORM_DIR} && terraform destroy -auto-approve -var="vm_name=${name}`,
     (error, stdout, stderr) => {
-      if (error) return res.status(500).json({ error: stderr })
+      if (error) {
+        console.error(`Error executing terraform destroy: ${error.message}`)
+        return res.status(500).json({ error: stderr })
+      }
+      console.log(`Terraform destroy stdout: ${stdout}`)
       res.json({ output: stdout })
     }
   )
+
+  console.log(`Deleting VM: ${name}`)
 })
 
 export default router

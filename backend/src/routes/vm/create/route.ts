@@ -18,10 +18,16 @@ router.post("/", async (req, res) => {
   exec(
     `cd ${TERRAFORM_DIR} && terraform apply -auto-approve`,
     (error, stdout, stderr) => {
-      if (error) return res.status(500).json({ error: stderr })
+      if (error) {
+        console.error(`Error executing terraform apply: ${error.message}`)
+        return res.status(500).json({ error: stderr })
+      }
+      console.log(`Terraform apply stdout: ${stdout}`)
       res.status(200).json({ output: stdout })
     }
   )
+
+  console.log(`Creating VM: ${name} with ${cpu} CPU and ${memory} MB memory`)
 })
 
 export default router

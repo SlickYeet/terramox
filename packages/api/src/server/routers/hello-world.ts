@@ -1,4 +1,5 @@
 import z from "zod"
+
 import { createTRPCRouter, publicProcedure } from "../init"
 
 export const helloWorldRouter = createTRPCRouter({
@@ -6,7 +7,7 @@ export const helloWorldRouter = createTRPCRouter({
     .input(
       z.object({
         text: z.string(),
-      }),
+      })
     )
     .query(({ input }) => {
       return {

@@ -1,6 +1,7 @@
+import { resolve } from "path"
 import dotenv from "dotenv"
 
-dotenv.config({ path: require.resolve("../../.env") })
+dotenv.config({ path: resolve(__dirname, "../../.env") })
 
-export const env = process.env
 export { baseEnv } from "./env"
+export const env = process.env

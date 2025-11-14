@@ -4,8 +4,12 @@
   "scripts": {
     "clean": "rm -rf node_modules .turbo"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "zod": "^4.1.12"
   },
-  "peerDependencies": {}
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.10.1"
+  }
 }

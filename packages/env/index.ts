@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+export { env } from "./src/env"

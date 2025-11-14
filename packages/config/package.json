@@ -1,0 +1,11 @@
+{
+  "name": "@terramox/config",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

@@ -1,9 +1,10 @@
 {
   "name": "@terramox/api",
   "version": "0.0.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo"
+  },
   "dependencies": {
     "superjson": "^2.2.5",
     "zod": "^4.1.12"

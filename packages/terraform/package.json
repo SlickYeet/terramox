@@ -6,6 +6,7 @@
     "clean": "rm -rf node_modules .turbo"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^24.10.1"
   }
 }

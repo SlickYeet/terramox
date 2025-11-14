@@ -1,5 +1,6 @@
 import z from "zod"
 
+import { env } from "../../env"
 import { createTRPCRouter, publicProcedure } from "../init"
 
 export const helloWorldRouter = createTRPCRouter({
@@ -11,7 +12,7 @@ export const helloWorldRouter = createTRPCRouter({
     )
     .query(({ input }) => {
       return {
-        greeting: `Hello ${input.text}`,
+        greeting: `Hello ${input.text}! ${env.NEXT_PUBLIC_URL}`,
       }
     }),
 })

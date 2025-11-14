@@ -1,6 +1,6 @@
 import express from "express"
 
-import vmRouter from "@/routes/vm/index"
+import vmRouter from "@/routes/vm"
 
 const app = express()
 app.use(express.json())

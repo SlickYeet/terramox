@@ -1,8 +1,8 @@
 "use server"
 
-import { env } from "@terramox/env"
 import z from "zod"
 
+import { env } from "@/env"
 import { normalizeResourceName } from "@/lib/utils"
 import type { CreateVMRequestSchema } from "@/validators"
 

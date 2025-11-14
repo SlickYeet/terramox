@@ -3,7 +3,7 @@ import { Router } from "express"
 
 import { TERRAFORM_DIR } from "@/constants"
 
-const router = Router()
+const router: Router = Router()
 
 router.post("/", async (req, res) => {
   const { name } = req.body as { name: string }
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
         return res.status(500).json({ error: stderr })
       }
       console.log(`Terraform destroy stdout: ${stdout}`)
-      res.json({ output: stdout })
+      return res.json({ output: stdout })
     }
   )
 

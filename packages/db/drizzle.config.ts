@@ -1,6 +1,6 @@
 import { defineConfig } from "drizzle-kit"
 
-import { env } from "@terramox/env"
+import { env } from "./env"
 
 export default defineConfig({
   schema: "./src/schema.ts",

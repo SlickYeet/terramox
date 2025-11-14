@@ -1,6 +1,7 @@
-import { env } from "@terramox/env"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+
+import { env } from "@terramox/env"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

@@ -1,6 +1,6 @@
 import type { NextConfig } from "next"
 
-import "@terramox/env"
+import "./src/env"
 
 const nextConfig: NextConfig = {
   typedRoutes: true,

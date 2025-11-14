@@ -3,7 +3,7 @@ import { Router } from "express"
 import createRouter from "./create/route"
 import deleteRouter from "./delete/route"
 
-const router = Router()
+const router: Router = Router()
 
 router.use("/create", createRouter)
 router.use("/delete", deleteRouter)

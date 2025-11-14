@@ -5,7 +5,7 @@ import { Router } from "express"
 import { TERRAFORM_DIR } from "@/constants"
 import type { CreateResourceRequest } from "@/validators/requests"
 
-const router = Router()
+const router: Router = Router()
 
 router.post("/", async (req, res) => {
   const { name, cpu, memory } = req.body as CreateResourceRequest
@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
         return res.status(500).json({ error: stderr })
       }
       console.log(`Terraform apply stdout: ${stdout}`)
-      res.status(200).json({ output: stdout })
+      return res.status(200).json({ output: stdout })
     }
   )
 

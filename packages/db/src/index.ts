@@ -1,7 +1,7 @@
-import { env } from "@terramox/env"
 import { drizzle } from "drizzle-orm/postgres-js"
 import postgres from "postgres"
 
+import { env } from "../env"
 import * as schema from "./schema"
 
 const globalForDb = globalThis as unknown as {

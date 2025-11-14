@@ -1,11 +1,11 @@
 {
   "name": "backend",
-  "module": "index.ts",
+  "module": "src/server.ts",
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "bun --watch run src/server.ts",
-    "build": "bun run build src/server.ts --outfile dist/server.js",
+    "build": "bun build src/server.ts --target bun --outfile dist/server.js",
     "start": "bun run dist/server.js",
     "format": "prettier '**/*.{mjs,ts,tsx,md,json}' --ignore-path ../../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --write",
     "format:check": "prettier '**/*.{mjs,ts,tsx,md,json}' --ignore-path ../../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --check",

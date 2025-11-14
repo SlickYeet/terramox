@@ -1,7 +1,6 @@
 "use client"
 
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query"
-import type { AppRouter } from "@terramox/api"
 import {
   createTRPCReact,
   httpBatchStreamLink,
@@ -10,6 +9,8 @@ import {
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server"
 import React from "react"
 import superjson from "superjson"
+
+import type { AppRouter } from "@terramox/api"
 
 import { getBaseUrl } from "@/lib/utils"
 

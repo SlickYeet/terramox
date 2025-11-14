@@ -6,6 +6,8 @@
     "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "@terramox/env": "*",
     "superjson": "^2.2.5",
     "zod": "^4.1.12"
   },

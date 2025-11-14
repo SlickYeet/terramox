@@ -3,7 +3,7 @@ import { Router } from "express"
 
 import { TERRAFORM_DIR } from "@/constants"
 
-const router: Router = Router()
+const router = Router()
 
 router.post("/", async (req, res) => {
   const { name } = req.body as { name: string }

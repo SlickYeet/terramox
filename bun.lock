@@ -24,6 +24,7 @@
       "name": "backend",
       "dependencies": {
         "@terramox/api": "*",
+        "@terramox/auth": "*",
         "@terramox/db": "*",
         "@terramox/env": "*",
         "express": "^5.1.0",
@@ -50,6 +51,7 @@
         "@terramox/env": "*",
         "@trpc/react-query": "^11.7.1",
         "@trpc/server": "^11.7.1",
+        "better-auth": "^1.3.34",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "lucide-react": "^0.553.0",

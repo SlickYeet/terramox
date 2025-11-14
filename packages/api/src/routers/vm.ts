@@ -2,7 +2,7 @@ import z from "zod"
 
 import { applyTerraform } from "@terramox/terraform"
 
-import { createTRPCRouter, publicProcedure } from "@/init"
+import { createTRPCRouter, publicProcedure } from "../init"
 
 export const vmRouter = createTRPCRouter({
   create: publicProcedure

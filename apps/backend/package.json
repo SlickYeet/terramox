@@ -13,8 +13,8 @@
     "clean": "rm -rf .turbo node_modules"
   },
   "dependencies": {
-    "@terramox/auth": "*",
     "@terramox/api": "*",
+    "@terramox/auth": "*",
     "@terramox/db": "*",
     "@terramox/env": "*",
     "express": "^5.1.0",

@@ -1,0 +1,17 @@
+{
+  "name": "@terramox/auth",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "auth:generate": "bunx --bun @better-auth/cli@latest generate --config ./src/server/auth/index.ts --yes",
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@terramox/db": "*",
+    "@terramox/env": "*",
+    "better-auth": "^1.3.34"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

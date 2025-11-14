@@ -1,2 +1,2 @@
-export * from "./server/init"
-export * from "./server/root"
+export * from "./init"
+export * from "./root"

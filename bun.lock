@@ -86,7 +86,9 @@
       "version": "0.0.0",
       "dependencies": {
         "@t3-oss/env-core": "^0.13.8",
+        "@terramox/config": "*",
         "@terramox/env": "*",
+        "@terramox/terraform": "*",
         "superjson": "^2.2.5",
         "zod": "^4.1.12",
       },
@@ -110,6 +112,13 @@
         "better-auth": "^1.3.34",
         "zod": "^4.1.12",
       },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+    },
+    "packages/config": {
+      "name": "@terramox/config",
+      "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "latest",
       },
@@ -150,6 +159,7 @@
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "latest",
+        "@types/node": "^24.10.1",
       },
     },
   },
@@ -487,6 +497,8 @@
     "@terramox/api": ["@terramox/api@workspace:packages/api"],
 
     "@terramox/auth": ["@terramox/auth@workspace:packages/auth"],
+
+    "@terramox/config": ["@terramox/config@workspace:packages/config"],
 
     "@terramox/db": ["@terramox/db@workspace:packages/db"],
 

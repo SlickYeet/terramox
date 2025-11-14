@@ -6,11 +6,11 @@ import {
   httpBatchStreamLink,
   loggerLink,
 } from "@trpc/react-query"
-import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server"
-import React from "react"
+import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server"
+import { useState } from "react"
 import superjson from "superjson"
 
-import type { AppRouter } from "@terramox/api"
+import { type AppRouter } from "@terramox/api"
 
 import { getBaseUrl } from "@/lib/utils"
 
@@ -34,7 +34,7 @@ export type RouterOutputs = inferRouterOutputs<AppRouter>
 export function TRPCReactProvider({ children }: React.PropsWithChildren) {
   const queryClient = getQueryClient()
 
-  const [trpcClient] = React.useState(() =>
+  const [trpcClient] = useState(() =>
     api.createClient({
       links: [
         loggerLink({

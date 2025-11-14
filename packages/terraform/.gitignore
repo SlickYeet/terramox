@@ -1,0 +1,5 @@
+# terraform
+src/terraform/.terraform
+src/terraform/terraform.tfstate
+src/terraform/terraform.tfstate.backup
+src/terraform/vars.auto.tfvars.json

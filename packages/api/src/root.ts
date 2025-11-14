@@ -1,8 +1,8 @@
 import { createCallerFactory, createTRPCRouter } from "./init"
-import { helloWorldRouter } from "./routers/hello-world"
+import { vmRouter } from "./routers/vm"
 
 export const appRouter = createTRPCRouter({
-  helloWorld: helloWorldRouter,
+  vm: vmRouter,
 })
 
 export type AppRouter = typeof appRouter

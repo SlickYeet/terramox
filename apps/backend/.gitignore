@@ -33,9 +33,3 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
-
-# terraform
-terraform/.terraform
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
-terraform/vars.auto.tfvars.json

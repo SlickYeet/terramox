@@ -18,7 +18,7 @@ export type Template<T extends TemplateOSType> = {
 }
 
 function capitalize(s: string) {
-  return s.length === 0 ? s : s[0].toUpperCase() + s.slice(1)
+  return s.length === 0 ? s : s.charAt(0).toUpperCase() + s.slice(1)
 }
 
 export const VM_TEMPLATES_DERIVED: { [K in TemplateOSType]: Template<K>[] } =
@@ -33,7 +33,7 @@ export const VM_TEMPLATES_DERIVED: { [K in TemplateOSType]: Template<K>[] } =
         name: `${capitalize(type)} ${version}`,
         os: { type, version },
       })),
-    ]),
+    ])
   ) as { [K in TemplateOSType]: Template<K>[] }
 
 export const VM_TEMPLATES = VM_TEMPLATES_DERIVED

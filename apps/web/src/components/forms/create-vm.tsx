@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { api } from "@/lib/trpc/client"
 import { CreateVMRequestSchema } from "@/validators"
 
 export function CreateVM() {
@@ -26,6 +27,8 @@ export function CreateVM() {
       memory: 1024,
     },
   })
+
+  const createVM2 = api.vm.create.useMutation()
 
   async function onSubmit(values: z.infer<typeof CreateVMRequestSchema>) {
     await createVM(values)

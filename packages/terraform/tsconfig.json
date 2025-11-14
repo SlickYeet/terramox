@@ -1,4 +1,11 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["prettier.config.mjs"]
+  "include": ["prettier.config.mjs", "src/**/*"],
+  "compilerOptions": {
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }

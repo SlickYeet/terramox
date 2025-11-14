@@ -10,7 +10,7 @@
     "format:check": "turbo format:check && prettier --check '*.{cjs,json}' --ignore-unknown --no-error-on-unmatched-pattern",
     "check": "turbo lint typecheck format:check && manypkg check",
     "typecheck": "turbo run typecheck",
-    "clean": "turbo clean && rm -rf node_modules .turbo pnpm-lock.yaml",
+    "clean": "turbo clean && rm -rf node_modules .turbo bun.lock",
     "shadcn": "cd frontend && bunx --bun shadcn"
   },
   "devDependencies": {

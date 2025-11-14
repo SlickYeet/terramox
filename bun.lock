@@ -147,6 +147,13 @@
         "@types/node": "^24.10.1",
       },
     },
+    "packages/terraform": {
+      "name": "@terramox/terraform",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+    },
   },
   "packages": {
     "@alloc/quick-lru": ["@alloc/quick-lru@5.2.0", "", {}, "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw=="],
@@ -486,6 +493,8 @@
     "@terramox/db": ["@terramox/db@workspace:packages/db"],
 
     "@terramox/env": ["@terramox/env@workspace:packages/env"],
+
+    "@terramox/terraform": ["@terramox/terraform@workspace:packages/terraform"],
 
     "@trpc/client": ["@trpc/client@11.7.1", "", { "peerDependencies": { "@trpc/server": "11.7.1", "typescript": ">=5.7.2" } }, "sha512-uOnAjElKI892/U6aQMcBHYs3x7mme3Cvv1F87ytBL56rBvs7+DyK7r43zgaXKf13+GtPEI6ex5xjVUfyDW8XcQ=="],
 

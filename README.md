@@ -14,3 +14,4 @@
 - [ ] Error handling + async jobs
   - Wrap Terraform calls in `try/catch` blocks for typed errors
   - Async job tracking via `BullMQ`, or a JSON file/db that stores job status
+- [ ] Global typed env

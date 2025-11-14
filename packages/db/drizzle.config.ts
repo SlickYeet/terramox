@@ -1,8 +1,9 @@
-import { env } from "@terramox/env"
 import { defineConfig } from "drizzle-kit"
 
+import { env } from "@terramox/env"
+
 export default defineConfig({
-  schema: "./src/server/db/schema.ts",
+  schema: "./src/schema.ts",
   dialect: "postgresql",
   dbCredentials: {
     url: env.DATABASE_URL,

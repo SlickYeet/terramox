@@ -9,7 +9,16 @@ const config = {
   arrowParens: "always",
   plugins: ["@ianvs/prettier-plugin-sort-imports"],
   trailingComma: "es5",
-  importOrder: ["<THIRD_PARTY_MODULES>", "", "^@/", "", "^[.][.]/", "^[.]/"],
+  importOrder: [
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "@terramox/(.*)",
+    "",
+    "^@/",
+    "",
+    "^[.][.]/",
+    "^[.]/",
+  ],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   importOrderTypeScriptVersion: "5.0.0",
 }

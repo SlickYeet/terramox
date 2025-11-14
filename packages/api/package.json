@@ -1,5 +1,6 @@
 {
   "name": "@terramox/api",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "clean": "rm -rf node_modules .turbo"
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@trpc/server": "^11.7.1",
     "@types/bun": "latest",
     "prettier": "^3.6.2"
   }

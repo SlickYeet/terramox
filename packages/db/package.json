@@ -1,5 +1,6 @@
 {
   "name": "@terramox/db",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "db:generate": "drizzle-kit generate",

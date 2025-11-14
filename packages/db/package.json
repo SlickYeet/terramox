@@ -1,8 +1,20 @@
 {
-  "name": "db",
-  "module": "src/index.ts",
+  "name": "@terramox/db",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "types": "index.ts",
   "type": "module",
-  "private": true,
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.7",
+    "postgres": "^3.4.7"
+  },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@types/bun": "latest",
